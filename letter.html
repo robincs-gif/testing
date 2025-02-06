@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To</title>
+
+    <script>
+        // Check if the user has answered the question
+        if (localStorage.getItem("answered") !== "true") {
+            window.location.href = "index.html"; // Redirect back to index.html
+        }
+    </script>
+    
+    
+
+    <style>
+        /* Background & Text */
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        /* Heart Animation */
+        .heart {
+            font-size: 50px;
+            color: red;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart-shape {
+            position: absolute;
+            color: red;
+            font-size: 30px;
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Music Player */
+        .music-container {
+            margin-top: 20px;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To My</h1>
+    <p>I am not the best at writing letters, but I will tell you how feel.</p>
+    <p>I sincerely apologize for how I have been acting lately. That is not something you deserve because you deserve only the best of me.</p>
+    <p>I took the whole entire day just to compose this apology letter to you because I am genuinely sorry for being so makulit and matigas-ulo.</p>
+    <img src="https://c.tenor.com/6UUKHRPBJ9oAAAAj/cute.gif">
+    <p>Yes, I know I took some of your stickers because it was really cute and it reminded me of you</p>
+    <p>I am really glad that I met someone like you. You are such an amazing, ambitious, beautiful, hard-working, girl. A thousand words is not enough to describe who you are and how you are as a person.</p>
+    <p>It would take someone a lifetime to describe how you are the best person out there.</p>
+    <img src="https://media.tenor.com/XCAra2IMt_AAAAAi/sumikko-gurashi.gif">
+    <p>I want to tell you that throughout all of the hardships you endured and will endure, I will continue to support you forever.</p>
+    <p>Your mental resillience and your optimist outlook is one of the main things I admire about you</p>
+    <p>Even though you might be feeling down and haven't been feeling the best, you still do your best for me and I really am grateful for that.</p>
+    <p>For that, I want to say that I am forever grateful to you. I really really genuinely appreciate you.</p>
+    <img src="https://c.tenor.com/EbxAA-rZG2oAAAAC/tenor.gif">
+    <p>All the times you were there for me, I will forever cherish those memories. I want to be there for you too</p>
+    <p>There may be times when the world is dark and dim; but , I know you will stand strong above it all. Just know that I will forever root for you.</P>
+    <img src="https://media.tenor.com/4DiFwww6548AAAAi/kitty.gif">
+    <p>To match your courage and resillience, I need to man up for the most beautiful and amazing girl out there</p>
+    <p>I want to let you know that I will always be here despite my busy schedule.</p>
+    <p>I want to let you know that you make my every day special so I want to do the same for you.</p>
+    <p>I hope everything that you ever wanted will be fulfilled by the universe</p>
+    <p class="heart">❤️</p>
+    <p>From Robin</p>
+    <img src="banana-cat-crying.gif" alt="Crying Banana Cat">
+
+
+    <!-- Floating Hearts Animation -->
+    <div class="floating-hearts">
+        <script>
+            for (let i = 0; i < 20; i++) {
+                let heart = document.createElement("div");
+                heart.className = "heart-shape";
+                heart.innerHTML = "❤️";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+                document.querySelector(".floating-hearts").appendChild(heart);
+            }
+        </script>
+    </div>
+        <p class="song-message">I picked this song because, after you told me this was one of your favorite songs from Rivermaya, I started listening to it more </p>
+        <p>and it easily became my one of my favorites. There is so much more to the lyrics if you listen carefully to it, and that's why I really like this song</p>
+
+
+        <!-- Music -->
+        <audio controls autoplay>
+            <source src="Rivermaya - Balisong.mp3" type="audio/mp3">
+            
+        </audio>
+    </div>
+
+    <!-- gifs -->
+    <div class="gallery">
+        <div class="gif-container">
+            <img src="https://c.tenor.com/kY1y6OsXtlUAAAAj/cry-1433.gif">
+            <p>Me waking this morning.</p>
+        </div>
+        <div>
+            <img src="https://c.tenor.com/OY6bIk0asR4AAAAj/quby.gif">
+            <p>Me making this letter for you.</p>
+        </div>
+        <div>
+            <img src="https://c.tenor.com/yk7NJUarB38AAAAC/tenor.gif">
+            <p>Me when you ignore me.</p>
+        </div>
+        
+    </div>
+
+</body>
+</html>

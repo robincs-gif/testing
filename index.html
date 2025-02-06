@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .question-container {
+            margin-top: 30px;
+        }
+
+        .question-container button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .question-container button:hover {
+            background-color: #ff1c49;
+        }
+
+        .response {
+            font-size: 1.5em;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>E Before You Proceed...</h1>
+    <p>I really want to say sorry you. I know you I haven't been the best for you lately.</p>
+    <p></p>
+    <p>I really sincerely apologize for how I've been acting. That is not something you deserve because you deserve only the best.</p>
+    <p>(***Turn up your volume!!***)</p>
+    
+    <!-- Interactive Question -->
+    <div class="question-container">
+        <h2>Are you still mad/upset at me? </h2>
+        <button onclick="showResponse('yes')">Yes, I am mad at you >:(</button>
+        <button onclick="showResponse('yesagain')">Yes, I am really mad at you! >:(</button>
+        <button onclick="showResponse('no')">No, just a little bit</button>
+        <p id="response" class="response"></p>
+    </div>
+
+    <script>
+        function showResponse(answer) {
+            let responseText = document.getElementById("response");
+    
+            if (answer === "yes") {
+                responseText.innerHTML = "Yeah, I know. Don't worry, I'll make it up to you! Now, wait for the page to load ❤️ Redirecting...";
+            
+            } if (answer == "yesagain") {responseText.innerHTML = "Yeah, I really know that. I'm sorry again. I'm sorrrryyyyyyyyyy ❤️ Redirecting...";
+            
+            } else {
+                responseText.innerHTML = "Yeah, I know. But, don't worry. I'll continue to become the best to change my negative attitude ❤️ Redirecting...";
+            }
+    
+            responseText.style.display = "block";
+    
+            localStorage.setItem("answered", "true");
+    
+            setTimeout(() => { window.location.href = "letter.html"; }, 5000);
+        }
+    </script>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="https://c.tenor.com/jaVORWcTiyEAAAAC/tenor.gif" alt="Cute Apology GIF" width="300">
+    </div>
+
+</body>
+</html>
